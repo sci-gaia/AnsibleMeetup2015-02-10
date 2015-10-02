@@ -41,36 +41,40 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>Ansible Meetup Catania</h3>
-					<h1>How we use Ansible</h1>
+					<h1>Ansible Meetup Catania</h1>
+					<h3>2 October 2015</h3>
 					<p>
 						<small>Marco Fargetta</small>
 					</p>
 				</section>
+				<section>
+					<section>
+						<h1>How we use Ansible</h1>
+					</section>
 
 
-				<section data-markdown>
-					<script type="text/template">
+					<section data-markdown>
+						<script type="text/template">
 ## Remote deployment
 
 Federation services developed in Catania had to be deployed in some African countries
 
 **Providing sources, packages and instructions was a failure**
 
-					</script>
-				</section>
-				<section data-markdown>
-					<script type="text/template">
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
 ## South African sites (aka Bruce) request Ansible
 
 To avoid complex instructions service installation was defined as ansible roles
 
 Roles created in [AAROC github repo](https://github.com/AAROC/DevOps)
-					</script>
-				</section>
+						</script>
+					</section>
 
-				<section data-markdown>
-					<script type="text/template">
+					<section data-markdown>
+						<script type="text/template">
 ## Which roles are available
 
 Roles for grid sites developed by Bruce and others
@@ -82,25 +86,75 @@ Roles for Identity related services and SGW developed almost at INFN
 Utility roles have been created in the meantime
 
     firewall, http servers (apache httpd and tomcat), ldap, etc...
-					</script>
-				</section>
+						</script>
+					</section>
 
-				<section data-markdown>
-					<script type="text/template">
-## Use in Catania
+					<section data-markdown>
+						<script type="text/template">
+## Use in/out Catania
 
 Currently only a service has been deployed with ansible [discourse forum](http://discourse.sci-gaia.eu)
 
 However, outside of Catania many site are using our roles to manage their services
-					</script>
-				</section>
+						</script>
+					</section>
 
-				<section data-markdown>
-					<script type="text/template">
+					<section data-markdown>
+						<script type="text/template">
 ## How we use
 
-					</script>
+This is a critical point. Normally used for service management
+
+Very useful could be for test and development
+
+    Either using VMs, containers or the development machine
+						</script>
+					</section>
+
+					<section>
+						<h2>Discussion</h2>
+					</section>
 				</section>
+
+				<section>
+					<section>
+						<h1>Plans for a Shibv3 role</h1>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+## Problems with current implementation
+
+Default variables do not create a working service
+
+Variables defined in multiple locations and not documented clearly
+
+						</script>
+					</section>
+
+					<section data-markdown>
+						<script type="text/template">
+## Developer has to be the first user
+
+The role has to be created to deploy the service and not the other way around,
+deploy the service and create the role
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+## Better integration
+
+Make use of the many available roles
+
+Customisation has to be simple and clear
+						</script>
+					</section>
+
+					<section>
+						<h2>Discussion</h2>
+					</section>
+				</section>
+
 
 			</div>
 
